@@ -1,0 +1,120 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right, #16A085 0%, #F4D03F  51%, #16A085  100%);
+}
+.mainContainer{
+    width: 100%;
+    height: 100vh;
+    
+}
+
+h1{
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    margin: 20px 100px 0px 0px;
+    text-shadow: 2px 2px 7px#EB3349;
+}
+
+form{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+input{
+    width: 150px;
+    height: 40px;
+    margin: 0px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 50%;
+    /* border: 2px solid black; */
+    /* background-color: #949288; */
+    margin-bottom: 10px;
+}
+
+li{
+    text-decoration: none;
+    list-style-type: none;
+    width: 80%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8  51%, #757F9A  100%);
+}
+span{
+    width: 200px;
+    height: 70px;
+    /* background-color: rgb(156, 156, 229); */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid black; */
+    padding: 10px;
+    font-size: 25px;
+    text-transform: capitalize;
+    color: white;
+    font-weight: bold;
+    
+}
+button{
+    width: 100px;
+    height: 40px;
+    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97  51%, #DD5E89  100%);
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border-radius: 70px;
+    border: none;
+    box-shadow: 2px 2px 2px 1px rgb(36, 34, 34);
+    color: white;
+    font-size: 30px;
+}
+
+button:hover{
+    padding: 10px;
+}
+
+#player_list{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#del{
+    background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%);
+    font-size: large;
+}
+
+         
+
+
+ 
+ 
