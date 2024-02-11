@@ -23,10 +23,10 @@ function addData(){
       liEl.append(nameContent,countryContent,scoreContent,increaseBtn,deceBtn,deleteBtn);
       player_list.append(liEl);
       const inp = document.querySelectorAll("input");
-      //console.log(inp);
       inp.forEach(element => {
-         //console.log(element.value);
-         element.value = "";
+         if(element.type != "submit")
+            element.value = "";  
+
       });
      
       console.log(document.querySelector("#sub").children)  ;
@@ -38,31 +38,7 @@ function refresh(){
    playerListArray.sort((p1 , p2) => parseInt(p2.score) - parseInt(p1.score));
    player_list.innerHTML = ' ';
    addData();
-   // for(let i=0; i<playerListArray.length; i++){
-   //    const  player = playerListArray[i];
-   //    const liEl = document.createElement("li");
-   //    const nameContent = document.createElement("span");
-   //    nameContent.innerText = player.name;
-   //    const countryContent =  document.createElement("span");
-   //    countryContent.innerText = player.country;
-   //    const scoreContent = document.createElement("span");
-   //    scoreContent.innerText = player.score;
-   //    const deleteBtn = document.createElement("button");
-   //    deleteBtn.innerText = "Delete ";
-   //    const increaseBtn = document.createElement("button");
-   //    const deceBtn = document.createElement("button");
-   //    increaseBtn.innerText = "increaseBtn";
-   //    deceBtn.innerText = "decBtn";
-   //    increaseBtn.setAttribute('onclick',`incScoreHandler(${i})`);
-   //    deceBtn.setAttribute('onclick',  `decScoreHandler(${i})`);
-   //    deleteBtn.setAttribute('onclick', `deleteHandler(${i})`);
-   //    liEl.append(nameContent,countryContent,scoreContent,increaseBtn,deceBtn,deleteBtn);
-   //    player_list.append(liEl);
-   // }
-   
-
-      //console.log(playerListArray);
-}
+ }
 
 function incScoreHandler(index){
    const ans = playerListArray[index].score+=5;
@@ -79,11 +55,8 @@ function decScoreHandler(index){
 
 
 function deleteHandler(index){
-   alert("Are you Sure");
-   // console.log(playerListArray);
+   alert("Are you Sure");;
    playerListArray.splice(index,1);
-   // console.log(playerListArray.splice(index,1));
-   // console.log(playerListArray);
    refresh();
 }
 
@@ -96,8 +69,6 @@ function addPlayer(event){
    const LastName = document.querySelector("#lname").value;
    const country = document.querySelector("#country").value;
    const score = document.querySelector("#score").value;
-   //console.log(firstName,LastName,country,score);
-   //creating object
    const playerData ={
      name : firstName +" " +LastName,
      country : country,
@@ -108,29 +79,6 @@ function addPlayer(event){
    
    player_list.innerHTML = ' ';
    addData();
-//     console.log(playerData);
-//    console.log(playerListArray);
-   // for(let i=0; i<playerListArray.length; i++){
-   //    const  player = playerListArray[i];
-   //    const liEl = document.createElement("li");
-   //    const nameContent = document.createElement("span");
-   //    nameContent.innerText = player.name;
-   //    const countryContent =  document.createElement("span");
-   //    countryContent.innerText = player.country;
-   //    const scoreContent = document.createElement("span");
-   //    scoreContent.innerText = player.score;
-   //    const deleteBtn = document.createElement("button");
-   //    deleteBtn.innerText = "Delete ";
-   //    const increaseBtn = document.createElement("button");
-   //    const deceBtn = document.createElement("button");
-   //    increaseBtn.innerText = "increaseBtn";
-   //    deceBtn.innerText = "decBtn";
-   //    increaseBtn.setAttribute('onclick',`incScoreHandler(${i})`);
-   //    deceBtn.setAttribute('onclick',  `decScoreHandler(${i})`);
-   //    deleteBtn.setAttribute('onclick', `deleteHandler(${i})`);
-   //    liEl.append(nameContent,countryContent,scoreContent,increaseBtn,deceBtn,deleteBtn);
-   //    player_list.append(liEl);
-   // }
 }
 console.log(playerListArray);
 
